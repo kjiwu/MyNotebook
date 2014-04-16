@@ -9,11 +9,17 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media.Animation;
 
 namespace MyNotebookCustomControls.TimeAndWeather
 {
+    [TemplatePart(Name = DotName, Type = typeof(TextBlock))]
     public class Watch : Control
     {
+        public const string DotName = "tbkDot";
+
+        TextBlock tbkDot;
+
         #region constructor
 
         public Watch()
@@ -44,7 +50,37 @@ namespace MyNotebookCustomControls.TimeAndWeather
 
         public override void OnApplyTemplate()
         {
-            base.OnApplyTemplate();            
+            base.OnApplyTemplate();
+
+            tbkDot = GetTemplateChild(DotName) as TextBlock;
+            if (null != tbkDot)
+            {
+                DotAnimation();
+            }
+        }
+
+        #endregion
+
+        #region DotAnimation
+
+        private void DotAnimation()
+        {
+            if (null == tbkDot)
+                return;
+
+            Storyboard storyboard = new Storyboard();
+
+            DoubleAnimation f = new DoubleAnimation();
+            f.From = 0;
+            f.To = 1;
+            f.Duration = TimeSpan.FromSeconds(1);
+            f.RepeatBehavior = RepeatBehavior.Forever;
+            f.AutoReverse = true;
+
+            Storyboard.SetTarget(f, tbkDot);
+            Storyboard.SetTargetProperty(f, new PropertyPath("UIElement.Opacity"));
+            storyboard.Children.Add(f);
+            storyboard.Begin();
         }
 
         #endregion

@@ -86,7 +86,43 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Fonts\UnidreamLED.ttf" />
+    <Resource Include="Assets\Fonts\UnidreamLED.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Weather\0.gif">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Assets\Weather\1.gif" />
+    <Resource Include="Assets\Weather\10.gif" />
+    <Resource Include="Assets\Weather\11.gif" />
+    <Resource Include="Assets\Weather\12.gif" />
+    <Resource Include="Assets\Weather\13.gif" />
+    <Resource Include="Assets\Weather\14.gif" />
+    <Resource Include="Assets\Weather\15.gif" />
+    <Resource Include="Assets\Weather\16.gif" />
+    <Resource Include="Assets\Weather\17.gif" />
+    <Resource Include="Assets\Weather\18.gif" />
+    <Resource Include="Assets\Weather\19.gif" />
+    <Resource Include="Assets\Weather\2.gif" />
+    <Resource Include="Assets\Weather\20.gif" />
+    <Resource Include="Assets\Weather\21.gif" />
+    <Resource Include="Assets\Weather\22.gif" />
+    <Resource Include="Assets\Weather\23.gif" />
+    <Resource Include="Assets\Weather\24.gif" />
+    <Resource Include="Assets\Weather\25.gif" />
+    <Resource Include="Assets\Weather\26.gif" />
+    <Resource Include="Assets\Weather\27.gif" />
+    <Resource Include="Assets\Weather\28.gif" />
+    <Resource Include="Assets\Weather\29.gif" />
+    <Resource Include="Assets\Weather\3.gif" />
+    <Resource Include="Assets\Weather\30.gif" />
+    <Resource Include="Assets\Weather\31.gif" />
+    <Resource Include="Assets\Weather\4.gif" />
+    <Resource Include="Assets\Weather\5.gif" />
+    <Resource Include="Assets\Weather\6.gif" />
+    <Resource Include="Assets\Weather\7.gif" />
+    <Resource Include="Assets\Weather\8.gif" />
+    <Resource Include="Assets\Weather\9.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />

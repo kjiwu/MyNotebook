@@ -16,9 +16,21 @@
 
     <Grid x:Name="LayoutRoot"
           Background="Transparent">
-        <wc:Watch HorizontalAlignment="Right"
-                  VerticalAlignment="Top" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
 
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Right"
+                    Margin="0, 0, 12, 0">
+
+            <wc:Weather Margin="0, 0, 24, 0"/>
+            
+            <wc:Watch VerticalAlignment="Center"
+                      />
+            
+        </StackPanel>
     </Grid>
 
 </phone:PhoneApplicationPage>

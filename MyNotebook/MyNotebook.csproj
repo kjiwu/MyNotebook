@@ -148,6 +148,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MyNotebookAssets\MyNotebookAssets.csproj">
+      <Project>{74FD3BDE-09E2-4F1E-AA97-C8BF7B222DA4}</Project>
+      <Name>MyNotebookAssets</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MyNotebookCustomControls\MyNotebookCustomControls.csproj">
       <Project>{9D93970E-1474-40EC-975B-D341B7CDDDE3}</Project>
       <Name>MyNotebookCustomControls</Name>

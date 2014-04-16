@@ -5,9 +5,9 @@
 
     <Style TargetType="wc:Watch">
         <Setter Property="FontFamily"
-                Value="/MyNotebookAssets;components/Assets/Fonts/UnidreamLED.ttf" />
+                Value="/MyNotebookAssets;component/Assets/Fonts/UnidreamLED.ttf#UnidreamLED" />
         <Setter Property="FontSize"
-                Value="30" />
+                Value="42" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="wc:Watch">
@@ -33,7 +33,8 @@
                             </Grid.ColumnDefinitions>
                             <TextBlock Text="{TemplateBinding Hour}" />
                             <TextBlock Text=":"
-                                       Grid.Column="1" />
+                                       Grid.Column="1"
+                                       x:Name="tbkDot"/>
                             <TextBlock Text="{TemplateBinding Minute}"
                                        Grid.Column="2" />
                         </Grid>
@@ -69,6 +70,57 @@
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style TargetType="wc:Weather">
+        <Setter Property="Opacity"
+                Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="wc:Weather">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Text="{TemplateBinding CityName}" 
+                                   FontSize="30"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Center"
+                                   Grid.RowSpan="2"
+                                   Margin="0, 0, 8, 0"/>
+                        
+                        <Grid Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+                            <Image Margin="0, 0, 4, 0"
+                                   Height="32"
+                                   Width="32"
+                                   x:Name="imgStart" />
+                            <Image Grid.Column="1"
+                                   Margin="4, 0, 0, 0"
+                                   Height="32"
+                                   Width="32" 
+                                   x:Name="imgEnd"/>
+                        </Grid>
+
+                        <TextBlock Text="{TemplateBinding Temperature}"
+                                   Grid.Row="1"
+                                   Grid.Column="1"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center" />
+
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>                
         </Setter>
     </Style>
 
