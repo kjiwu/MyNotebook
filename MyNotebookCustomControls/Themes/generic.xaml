@@ -1,0 +1,75 @@
+﻿<ResourceDictionary xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns="http://schemas.microsoft.com/client/2007"
+                    xmlns:wc="clr-namespace:MyNotebookCustomControls.TimeAndWeather">
+
+
+    <Style TargetType="wc:Watch">
+        <Setter Property="FontFamily"
+                Value="/MyNotebookAssets;components/Assets/Fonts/UnidreamLED.ttf" />
+        <Setter Property="FontSize"
+                Value="30" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="wc:Watch">
+                    <Grid Background="{TemplateBinding Background}">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Grid Grid.RowSpan="3"
+                              VerticalAlignment="Center"
+                              Margin="0, 0, 4, 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{TemplateBinding Hour}" />
+                            <TextBlock Text=":"
+                                       Grid.Column="1" />
+                            <TextBlock Text="{TemplateBinding Minute}"
+                                       Grid.Column="2" />
+                        </Grid>
+
+                        <Rectangle Width="1"
+                                   Fill="{TemplateBinding Foreground}"
+                                   VerticalAlignment="Stretch"
+                                   Grid.Column="1"
+                                   Grid.RowSpan="3" 
+                                   Visibility="Collapsed"/>
+
+                        <TextBlock Grid.Column="2"
+                                   Text="{TemplateBinding Week}" 
+                                   FontSize="24"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Margin="4, 0, 0, 0"/>
+
+                        <Rectangle Height="1"
+                                   Grid.Column="2"
+                                   Fill="{TemplateBinding Foreground}"
+                                   Grid.Row="1"
+                                   Visibility="Collapsed" />
+
+                        <TextBlock Grid.Column="2"
+                                   Grid.Row="2"
+                                   Text="{TemplateBinding Year}"
+                                   FontSize="24"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Margin="4, 0, 0, 0" />
+
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>
