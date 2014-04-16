@@ -7,7 +7,14 @@
 
     <!--Application Resources-->
     <Application.Resources>
-        <local:LocalizedStrings xmlns:local="clr-namespace:MyNotebook" x:Key="LocalizedStrings"/>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Assets/Styles/Default.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <local:LocalizedStrings xmlns:local="clr-namespace:MyNotebook"
+                                    x:Key="LocalizedStrings" />
+        </ResourceDictionary>
+        
     </Application.Resources>
 
     <Application.ApplicationLifetimeObjects>

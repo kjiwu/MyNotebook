@@ -2,6 +2,7 @@
 using MyNotebookCustomControls.Weather;
 using System;
 using System.Collections.Generic;
+using System.Device.Location;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -36,8 +37,11 @@ namespace MyNotebookCustomControls.TimeAndWeather
         public Weather()
         {
             DefaultStyleKey = typeof(Weather);
-            GetWeatherInfo();
 
+            Loaded += (s, args) =>
+            {
+                GetWeatherInfo();
+            };
 
             var ob = Observable.GenerateWithTime(0, x => true, x => x, x => TimeSpan.FromMinutes(30), x => x + 1);
             ob.ObserveOnDispatcher().Subscribe(x =>
@@ -177,12 +181,28 @@ namespace MyNotebookCustomControls.TimeAndWeather
 
         Dictionary<string, string> provinces;
         string tempCityName;
+        GeoCoordinateWatcher watcher; 
 
         protected async void GetWeatherInfo()
         {
             Geolocator locator = new Geolocator();
+            watcher = new GeoCoordinateWatcher();
+            watcher.MovementThreshold = 10;
+            watcher.PositionChanged += watcher_PositionChanged;
+
+            
+
             Geoposition position = await locator.GetGeopositionAsync(TimeSpan.FromSeconds(30), TimeSpan.FromMinutes(1));            
             GetWeatherInfoHandler(position.Coordinate.Latitude, position.Coordinate.Longitude);
+        }
+
+        void watcher_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
+        {
+            var ob = Observable.Return(e.Position).Throttle(TimeSpan.FromMinutes(0.5));
+            ob.ObserveOnDispatcher().Subscribe(x =>
+            {
+                GetWeatherInfoHandler(x.Location.Latitude, x.Location.Longitude);
+            });
         }
 
         void locator_PositionChanged(Geolocator sender, PositionChangedEventArgs args)
