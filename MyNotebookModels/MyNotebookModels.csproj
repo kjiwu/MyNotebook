@@ -84,8 +84,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Database\NoteCategoryDataContext.cs" />
+    <Compile Include="Database\NoteTemplateDataContext.cs" />
     <Compile Include="Interfaces\INotebookDataContext.cs" />
     <Compile Include="Models\NoteCategory.cs" />
+    <Compile Include="Models\NoteTemplate.cs" />
     <Compile Include="Models\ViewModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

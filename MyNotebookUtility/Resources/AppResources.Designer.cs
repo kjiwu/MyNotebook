@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MyNotebook.Resources {
+namespace MyNotebookUtility.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace MyNotebook.Resources {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MyNotebook.Resources.AppResources", typeof(AppResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("MyNotebookUtility.Resources.AppResources", typeof(AppResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -84,6 +84,33 @@ namespace MyNotebook.Resources {
         public static string ApplicationTitle {
             get {
                 return ResourceManager.GetString("ApplicationTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 休闲时刻.
+        /// </summary>
+        public static string NoteCategory_Leisure {
+            get {
+                return ResourceManager.GetString("NoteCategory_Leisure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 生活日志.
+        /// </summary>
+        public static string NoteCategory_Life {
+            get {
+                return ResourceManager.GetString("NoteCategory_Life", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 田园风光.
+        /// </summary>
+        public static string NoteCategory_Rural {
+            get {
+                return ResourceManager.GetString("NoteCategory_Rural", resourceCulture);
             }
         }
         

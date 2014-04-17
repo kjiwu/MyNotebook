@@ -1,6 +1,6 @@
-﻿using MyNotebook.Resources;
+﻿using MyNotebookUtility.Resources;
 
-namespace MyNotebook
+namespace MyNotebookUtility
 {
     /// <summary>
     /// Provides access to string resources.

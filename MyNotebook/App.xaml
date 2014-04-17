@@ -3,7 +3,8 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
-    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone">
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:str="clr-namespace:MyNotebookUtility;assembly=MyNotebookUtility">
 
     <!--Application Resources-->
     <Application.Resources>
@@ -11,7 +12,7 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Assets/Styles/Default.xaml" />
             </ResourceDictionary.MergedDictionaries>
-            <local:LocalizedStrings xmlns:local="clr-namespace:MyNotebook"
+            <str:LocalizedStrings xmlns:local="clr-namespace:MyNotebook"
                                     x:Key="LocalizedStrings" />
         </ResourceDictionary>
         

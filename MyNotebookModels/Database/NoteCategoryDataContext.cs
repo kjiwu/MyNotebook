@@ -5,6 +5,8 @@ using System.Data.Linq;
 using System.Linq;
 using MyNotebookUtility.Tools;
 using System.IO;
+using MyNotebookUtility.Resources;
+using System.Collections.Generic;
 
 
 namespace MyNotebookModels.Database
@@ -18,14 +20,39 @@ namespace MyNotebookModels.Database
             {
                 IsolatedStorageHelper.CreateDir(Constants.DB_Path);
                 this.CreateDatabase();
+
+                InitSystemCategories();
             }
         }
 
         public Table<NoteCategory> Categories;
 
+        private List<string> systemCategoryIds = new List<string>() { "1", "2", "3" };
+
+        private void InitSystemCategories()
+        {
+            Insert(new NoteCategory()
+            {
+                Id = "1",
+                Name = AppResources.NoteCategory_Life
+            });
+
+            Insert(new NoteCategory()
+            {
+                Id = "2",
+                Name = AppResources.NoteCategory_Leisure
+            });
+
+            Insert(new NoteCategory()
+            {
+                Id = "3",
+                Name = AppResources.NoteCategory_Rural
+            });
+        }
+
         public void Insert(NoteCategory value)
         {
-            var haveCategory = Categories.Select(p => p.Id == value.Id).Any();
+            var haveCategory = Categories.Any(x => x.Id.Equals(value.Id));
 
             if (!haveCategory)
             {
@@ -40,6 +67,9 @@ namespace MyNotebookModels.Database
 
         public void Remove(string id)
         {
+            if (systemCategoryIds.Contains(id))
+                return;
+
             var category = from c in Categories where c.Id.Equals(id) select c;
             foreach (var c in category)
             {
@@ -51,6 +81,9 @@ namespace MyNotebookModels.Database
 
         public void Update(string id, NoteCategory newValue)
         {
+            if (systemCategoryIds.Contains(id))
+                return;
+
             var category = from c in Categories where c.Id.Equals(id) select c;
             foreach (var c in category)
             {

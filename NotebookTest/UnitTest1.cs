@@ -51,7 +51,11 @@ namespace NotebookTest
                 Assert.AreNotEqual(0, database.Categories.Count());
                 database.Remove(categoryId);
 
-                Assert.AreEqual(0, database.Categories.Count());
+                Assert.AreEqual(3, database.Categories.Count());
+
+                Assert.IsTrue(database.Categories.First(p => p.Id == "1") != null);
+                Assert.IsTrue(database.Categories.First(p => p.Id == "2") != null);
+                Assert.IsTrue(database.Categories.First(p => p.Id == "3") != null);
             }
         }
     }

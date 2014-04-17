@@ -134,4 +134,13 @@
   <data name="AppBarMenuItemText" xml:space="preserve">
     <value>Menu Item</value>
   </data>
+  <data name="NoteCategory_Leisure" xml:space="preserve">
+    <value>休闲时刻</value>
+  </data>
+  <data name="NoteCategory_Life" xml:space="preserve">
+    <value>生活日志</value>
+  </data>
+  <data name="NoteCategory_Rural" xml:space="preserve">
+    <value>田园风光</value>
+  </data>
 </root>

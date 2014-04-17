@@ -93,16 +93,10 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="LocalizedStrings.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Resources\AppResources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>AppResources.resx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -147,12 +141,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources\AppResources.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\MyNotebookAssets\MyNotebookAssets.csproj">
       <Project>{74FD3BDE-09E2-4F1E-AA97-C8BF7B222DA4}</Project>
       <Name>MyNotebookAssets</Name>
@@ -160,6 +148,10 @@
     <ProjectReference Include="..\MyNotebookCustomControls\MyNotebookCustomControls.csproj">
       <Project>{9D93970E-1474-40EC-975B-D341B7CDDDE3}</Project>
       <Name>MyNotebookCustomControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyNotebookUtility\MyNotebookUtility.csproj">
+      <Project>{754C2BA6-DA96-4A79-BF52-8126233B82F9}</Project>
+      <Name>MyNotebookUtility</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
