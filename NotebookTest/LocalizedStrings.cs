@@ -1,6 +1,6 @@
-﻿using MyNotebookUnitTest.Resources;
+﻿using NotebookTest.Resources;
 
-namespace MyNotebookUnitTest
+namespace NotebookTest
 {
     /// <summary>
     /// Provides access to string resources.

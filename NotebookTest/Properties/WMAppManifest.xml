@@ -2,7 +2,7 @@
 
 <Deployment xmlns="http://schemas.microsoft.com/windowsphone/2012/deployment" AppPlatformVersion="8.0">
   <DefaultLanguage xmlns="" code="en-US"/>
-  <App xmlns="" ProductID="{5a21d682-52b2-412a-88a7-98760caaed26}" Title="MyNotebookUnitTest" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="MyNotebookUnitTest author" Description="Sample description" Publisher="MyNotebookUnitTest" PublisherID="{c7380bfb-ec34-4373-8a64-b104c87f2ac1}">
+  <App xmlns="" ProductID="{1d31b0db-83e7-495f-b7ae-5bd7dd27f82c}" Title="NotebookTest" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal"  Author="NotebookTest author" Description="Sample description" Publisher="NotebookTest" PublisherID="{24436034-8512-420c-b5c4-6b2744bea036}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING"/>
@@ -15,12 +15,12 @@
       <DefaultTask  Name ="_default" NavigationPage="MainPage.xaml"/>
     </Tasks>
     <Tokens>
-      <PrimaryToken TokenID="MyNotebookUnitTestToken" TaskName="_default">
+      <PrimaryToken TokenID="NotebookTestToken" TaskName="_default">
         <TemplateFlip>
           <SmallImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileSmall.png</SmallImageURI>
           <Count>0</Count>
           <BackgroundImageURI IsRelative="true" IsResource="false">Assets\Tiles\FlipCycleTileMedium.png</BackgroundImageURI>
-          <Title>MyNotebookUnitTest</Title>
+          <Title>NotebookTest</Title>
           <BackContent></BackContent>
           <BackBackgroundImageURI></BackBackgroundImageURI>
           <BackTitle></BackTitle>

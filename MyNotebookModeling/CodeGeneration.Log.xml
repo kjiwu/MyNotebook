@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2014-04-17T09:34:09" Importance="High" Text="Code generation or text transformation started." />
+  <Message Timestamp="2014-04-17T09:34:10" Importance="Diagnostic" Text="Name = ClassTemplate" />
+  <Message Timestamp="2014-04-17T09:34:10" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2014-04-17T09:34:10" Importance="Diagnostic" Text="ProjectPath = ..\MyNotebookModelingLib\MyNotebookModelingLib.csproj" />
+  <Message Timestamp="2014-04-17T09:34:10" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2014-04-17T09:34:10" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2014-04-17T09:34:10" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2014-04-17T09:34:10" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2014-04-17T09:34:10" Importance="Medium" Text="MyNotebookModeling's Text Template Binding: 'ClassTemplate' will apply ClassTemplate.t4 to: 'MyNotebookModeling::NoteCategory' -  (Class), 'MyNotebookModeling::NoteCategoryItem' -  (Class) " />
+  <Message Timestamp="2014-04-17T09:34:28" Importance="Medium" Text="Project Added: C:\Users\wulei\Documents\GitHub\MyNotebook\MyNotebookModelingLib\MyNotebookModelingLib.csproj" />
+  <Message Timestamp="2014-04-17T09:34:28" Importance="Medium" Text="'MyNotebookModeling::NoteCategory' -  (Class) : success (file created) - C:\Users\wulei\Documents\GitHub\MyNotebook\MyNotebookModelingLib\GeneratedCode\NoteCategory.cs" />
+  <Message Timestamp="2014-04-17T09:34:29" Importance="Medium" Text="'MyNotebookModeling::NoteCategoryItem' -  (Class) : success (file created) - C:\Users\wulei\Documents\GitHub\MyNotebook\MyNotebookModelingLib\GeneratedCode\NoteCategoryItem.cs" />
+  <Message Timestamp="2014-04-17T09:34:29" Importance="Diagnostic" Text="Name = StructTemplate" />
+  <Message Timestamp="2014-04-17T09:34:29" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2014-04-17T09:34:29" Importance="Diagnostic" Text="ProjectPath = ..\MyNotebookModelingLib\MyNotebookModelingLib.csproj" />
+  <Message Timestamp="2014-04-17T09:34:29" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2014-04-17T09:34:29" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2014-04-17T09:34:29" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2014-04-17T09:34:29" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2014-04-17T09:34:29" Importance="Medium" Text="MyNotebookModeling's Text Template Binding: 'StructTemplate' will apply StructTemplate.t4 to: 'MyNotebookModeling::NoteCategory' -  (Class), 'MyNotebookModeling::NoteCategoryItem' -  (Class) " />
+  <Message Timestamp="2014-04-17T09:34:29" Importance="Diagnostic" Text="'MyNotebookModeling::NoteCategory' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2014-04-17T09:34:29" Importance="Diagnostic" Text="'MyNotebookModeling::NoteCategoryItem' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2014-04-17T09:34:30" Importance="Diagnostic" Text="The selection included 1 elements which were not bound to a template." />
+  <Message Timestamp="2014-04-17T09:34:30" Importance="Diagnostic" Text="'MyNotebookModeling::' -  (Association): no bound template." />
+  <Message Timestamp="2014-04-17T09:34:30" Importance="High" Text="Code generation complete. Errors: 0. Warnings: 0." />
+</Log>

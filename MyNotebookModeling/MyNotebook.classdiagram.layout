@@ -1,1 +1,42 @@
-﻿ 
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 13, 8.5" name="MyNotebook">
+  <logicalClassDesignerModelMoniker Id="08d0a3e5-acba-481e-bdcc-023b6e59839e" />
+  <nestedChildShapes>
+    <classShape Id="e117c511-980c-4c5a-a119-51c9c8fca9cb" absoluteBounds="11.125, 0.625, 1.5, 1.3479918644825619" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+      <classMoniker Id="a7a8cad3-ad5e-4932-adae-f72a68327e84" LastKnownName="NoteCategory" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="f448a47d-6d49-4542-b810-1424582a8dcd" absoluteBounds="11.14, 1.1403356393178306, 1.4700000000000002, 0.52148435761531176" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="95697a24-f712-40d8-80cd-11ac7529f151" absoluteBounds="11.14, 1.6718199969331422, 1.4700000000000002, 0.20117186754941963" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="4327c3dc-3c8c-4d67-b8ac-cd90ae56193b" absoluteBounds="10.75, 3, 2, 1.5281481095155076" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+      <classMoniker Id="1d544b0f-fe27-4667-89b7-af5d3fb04ed5" LastKnownName="NoteCategoryItem" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="12e35abf-268c-4430-b8ff-771b6f591f51" absoluteBounds="10.765, 3.5153356393178306, 1.9700000000000002, 0.68164060264825821" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="0e1c5a7d-4aa4-4926-8a8d-58485dddf847" absoluteBounds="10.765, 4.206976241966089, 1.9700000000000002, 0.22117186754941942" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(11.875 : 3); (11.875 : 1.97299186448256)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="1" targetMultiplicity="1">
+      <associationMoniker Id="8721fe48-9bda-4c16-8557-59e72b1d5ba8" />
+      <relativeChildShapes />
+      <nodes>
+        <classShapeMoniker Id="4327c3dc-3c8c-4d67-b8ac-cd90ae56193b" />
+        <classShapeMoniker Id="e117c511-980c-4c5a-a119-51c9c8fca9cb" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="49441184-a671-4fc4-899a-e889f73268d0" absoluteBounds="7, 0.625, 2.25, 2.4690855797131857" hideQualifiedName="false" increaseHeight="0.18800345897674561" customColor="181, 193, 223">
+      <classMoniker Id="f5beb542-0fe9-46ee-8dd2-05d968926465" LastKnownName="NoteItem" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="593ffb57-1f61-4ddd-b2cd-b2191ddd16f8" absoluteBounds="7.0150000000000006, 1.1403356393178306, 2.2199999999999998, 1.6425780728459358" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="8206fd32-d0d0-4a6f-877d-1a6ae1a98b56" absoluteBounds="7.0150000000000006, 2.7929137121637666, 2.2199999999999998, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="13e7f70d-82fa-40bd-a0e0-e9cb664d2e60" absoluteBounds="7, 3.25, 1.5, 1.2226562251647311" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
+      <classMoniker Id="8f01783a-c630-4417-944a-d896e04103bb" LastKnownName="NoteTemplate" />
+      <nestedChildShapes>
+        <AttributeElementListCompartment Id="9b6e4747-7866-4137-b66c-ef8359777418" absoluteBounds="7.0150000000000006, 3.6399999999999997, 1.4700000000000002, 0.52148435761531187" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <OperationElementListCompartment Id="3af36cbe-b31a-4de3-a35f-47c800d120a6" absoluteBounds="7.0150000000000006, 4.171484357615312, 1.4700000000000002, 0.20117186754941951" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</logicalClassDesignerDiagram>
