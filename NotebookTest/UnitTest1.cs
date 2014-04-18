@@ -57,6 +57,27 @@ namespace NotebookTest
                 Assert.IsTrue(database.Categories.First(p => p.Id == "2") != null);
                 Assert.IsTrue(database.Categories.First(p => p.Id == "3") != null);
             }
+
+            using (NoteTemplateDataContext db = new NoteTemplateDataContext())
+            {
+                string id = Guid.NewGuid().ToString("n");
+                NoteTemplate template = new NoteTemplate();
+                template.Id = id;
+                template.Name = "OK";
+
+                db.Insert(template);
+                var templateArr = from t in db.Templates select t;
+                Assert.AreEqual(1, templateArr.Count());
+
+                template.Name = "NewValue";
+                db.Update(template.Id, template);
+                templateArr = from t in db.Templates where t.Name.Equals("NewValue") select t;
+                Assert.AreEqual(1, templateArr.Count());
+
+                db.Remove(id);
+                templateArr = from t in db.Templates select t;
+                Assert.AreEqual(0, templateArr.Count());                
+            }
         }
     }
 }

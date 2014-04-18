@@ -83,6 +83,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Database\NotebookDataContextBase.cs" />
     <Compile Include="Database\NoteCategoryDataContext.cs" />
     <Compile Include="Database\NoteTemplateDataContext.cs" />
     <Compile Include="Interfaces\INotebookDataContext.cs" />

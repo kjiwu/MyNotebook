@@ -11,19 +11,21 @@ using System.Threading.Tasks;
 
 namespace MyNotebookModels.Database
 {
-    public class NoteTemplateDataContext : DataContext, INotebookDataContext<NoteTemplate>
+    public class NoteTemplateDataContext : NotebookDataContextBase, INotebookDataContext<NoteTemplate>
     {
         public NoteTemplateDataContext()
             : base(Constants.DB_NoteConfigPath)
         {
-            if (!this.DatabaseExists())
-            {
-                IsolatedStorageHelper.CreateDir(Constants.DB_Path);
-                this.CreateDatabase();
-            }
+            
         }
 
-        public Table<NoteTemplate> Templates;
+        public Table<NoteTemplate> Templates
+        {
+            get
+            {
+                return this.GetTable<NoteTemplate>();
+            }
+        }
 
         public void Insert(NoteTemplate value)
         {
@@ -41,12 +43,20 @@ namespace MyNotebookModels.Database
 
         public void Remove(string id)
         {
-            throw new NotImplementedException();
+            var template = from t in Templates where t.Id.Equals(id) select t;
+            Templates.DeleteAllOnSubmit(template);
+            this.SubmitChanges();
         }
 
         public void Update(string id, NoteTemplate newValue)
         {
-            throw new NotImplementedException();
+            var template = from t in Templates where t.Id.Equals(id) select t;
+            foreach (NoteTemplate t in template)
+            {
+                t.Name = newValue.Name;
+            }
+
+            this.SubmitChanges();
         }
     }
 }

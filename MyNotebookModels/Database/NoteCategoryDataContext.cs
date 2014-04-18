@@ -11,21 +11,21 @@ using System.Collections.Generic;
 
 namespace MyNotebookModels.Database
 {
-    public class NoteCategoryDataContext : DataContext, INotebookDataContext<NoteCategory>
+    public class NoteCategoryDataContext : NotebookDataContextBase, INotebookDataContext<NoteCategory>
     {
         public NoteCategoryDataContext()
             : base(Constants.DB_NoteConfigPath)
         {
-            if (!this.DatabaseExists())
-            {
-                IsolatedStorageHelper.CreateDir(Constants.DB_Path);
-                this.CreateDatabase();
-
-                InitSystemCategories();
-            }
+            InitSystemCategories();
         }
 
-        public Table<NoteCategory> Categories;
+        public Table<NoteCategory> Categories
+        {
+            get
+            {
+                return this.GetTable<NoteCategory>();
+            }
+        }
 
         private List<string> systemCategoryIds = new List<string>() { "1", "2", "3" };
 
